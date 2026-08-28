@@ -8,24 +8,34 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Docs with Tailwind",
-      social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/withastro/starlight",
-        },
-      ],
+      social: [],
+      logo: {
+        light: "./src/assets/logo-dark.png",
+        dark: "./src/assets/logo-light.png",
+        replacesTitle: true,
+      },
       sidebar: [
         {
-          label: "Store management",
-          items: [{ autogenerate: { directory: "store-management" } }],
+          label: "Onboarding",
+          link: "/onboarding/",
         },
         {
-          label: "Holidays",
-          items: [{ autogenerate: { directory: "holidays" } }],
+          label: "Item Preparation",
+          items: [{ autogenerate: { directory: "item-preparation" } }],
+        },
+        {
+          label: "Daily Operations",
+          items: [{ autogenerate: { directory: "daily-operations" } }],
+        },
+        {
+          label: "Miscellaneous",
+          items: [{ autogenerate: { directory: "miscellaneous" } }],
         },
       ],
-      customCss: ["./src/styles/global.css"],
+      customCss: [
+        "./src/styles/global.css",
+        "@fontsource-variable/inter/index.css",
+      ],
     }),
   ],
   vite: {
