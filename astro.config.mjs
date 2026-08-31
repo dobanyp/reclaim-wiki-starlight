@@ -20,6 +20,10 @@ export default defineConfig({
           link: "/onboarding/",
         },
         {
+          label: "Shifting & Holidays",
+          link: "/shifting-and-holidays",
+        },
+        {
           label: "Item Preparation",
           items: [{ autogenerate: { directory: "item-preparation" } }],
         },
