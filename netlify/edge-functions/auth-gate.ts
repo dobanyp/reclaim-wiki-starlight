@@ -84,7 +84,7 @@ function renderPage({
 }) {
   if (notConfigured) {
     return `<!DOCTYPE html><html><body style="font-family:system-ui;max-width:480px;margin:120px auto;text-align:center;">
-      <p>This page is not yet configured. The site owner needs to set the <code>PROTECTED_PAGE_PASSWORD</code> environment variable.</p>
+      <p>This page is not yet configured.</p>
     </body></html>`;
   }
   return `<!DOCTYPE html><html><body style="font-family:var(--sl-font, system-ui);background:var(--sl-color-bg, #1e293b);color:var(--sl-color-text, #fff);display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
